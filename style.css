@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #8b6990;
+  --secondary-color: hsl(292, 42%, 14%);
+  --accent-color: #ad28eb;
+  --background-color: hsl(275, 100%, 97%);
+}
+
+body {
+  height: 100vh;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: hsl(275, 100%, 97%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/background-pattern-desktop.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 50px;
+  color: var(--secondary-color);
+}
+
+h2 {
+  font-size: 15px;
+  color: var(--secondary-color);
+}
+
+.card-container {
+  max-width: 470px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  /* box-shadow: 0px 21px 14px 0px #EADAF4; */
+  box-shadow: 3px 19px 45px 0px rgba(0, 0, 0, 0.1);
+  margin-top: 56px;
+}
+
+.heading-container {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "";
+  color: #8b6990;
+  width: 20px;
+  height: 20px;
+  background-image: url("./images/icon-plus.svg");
+  margin-right: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin-left: 5px;
+  /* margin-right: 0px 10px; */
+}
+
+summary:hover {
+  cursor: pointer;
+  color: var(--accent-color);
+}
+
+details {
+  padding: 24px 0px;
+}
+
+hr {
+  /* background-color: var(--main-color); */
+  display: none;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--main-color);
+  padding-top: 24px;
+}
+
+details[open] > summary::after {
+  background-image: url("./images/icon-minus.svg");
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url("./images//background-pattern-mobile.svg");
+  }
+  .card-container{
+    width: inset;
+  }
+  
+}
+
+/* @media only screen and (max-width: 375px) {
+    body {
+      background-image:url("./images//background-pattern-mobile.svg");
+    }
+  } */
